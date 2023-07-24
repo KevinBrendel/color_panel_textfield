@@ -10,11 +10,10 @@ class MainFlutterWindow: NSWindow {
         
         RegisterGeneratedPlugins(registry: flutterViewController)
         
+        super.awakeFromNib()
+        
         // Open Color Picker
         let cp = NSColorPanel.shared
         cp.orderFront(self)
-        
-        // Super
-        super.awakeFromNib()
     }
 }
